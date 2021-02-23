@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  blog-backend:
+    build:
+      context: ../backend
+    image: blog-backend:latest
+    container_name: blog-backend
+    environment:
+      - NODE_ENV=production
+      - LISTEN_PORT=8080
+    volumes:
+      - ./backend_logs:/workspace/logs
+    ports:
+      - 8080:8080
+    networks:
+      - default
+
+networks:
+  default:
+    name: blog-net
