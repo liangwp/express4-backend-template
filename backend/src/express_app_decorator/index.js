@@ -3,8 +3,8 @@
 /**
  * module that exports a function to return an express app, decorated with the following:
  * 1. start() in lieu of listen()
- * 2. req logger attached to express req object
- * 3. route logging and timing logging using the req logger
+ * 2. `req` logger attached to express req object
+ * 3. route logging with shortened uuid and timing information, when using the `req` logger
  * 4. custom 404 and 500 error handling (returns json instead of plain text)
  * 5. clean-exit handler
  * 
