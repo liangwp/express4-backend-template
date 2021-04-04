@@ -1,0 +1,21 @@
+# Tests for basic server functionality
+# Route handling, logging, error handling
+
+### 200: Hello World
+GET http://localhost:8080 HTTP/1.1
+
+### 404
+GET http://localhost:8080/no-such-place HTTP/1.1
+
+### 200: Route handler hello
+GET http://localhost:8080/test HTTP/1.1
+
+### Error 500: Throwing error in route handler
+GET http://localhost:8080/test/error HTTP/1.1
+
+### 200: Delayed response using promise
+GET http://localhost:8080/test/wait HTTP/1.1
+
+### 500: Throwing error in promise route handler
+GET http://localhost:8080/test/errorp HTTP/1.1
+

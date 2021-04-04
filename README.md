@@ -7,3 +7,6 @@ Includes Docker, logging and routing boilerplate
 
 ### Example Routes:
 `/backend/src/routes/test_routes`
+
+### REST API tests (using vs code extension)
+`/dev/backend-01-basic.http`
